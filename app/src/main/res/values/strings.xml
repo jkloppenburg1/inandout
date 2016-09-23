@@ -12,9 +12,9 @@
     <string name="placeOrderButton">Place Order</string>
 
 
-    <string name="orderTotal">Order Total $</string>
-    <string name="itemsOrdered">Items Ordered:</string>
-    <string name="subtotal">Subtotal: $</string>
-    <string name="tax">Tax (8%):</string>
+    <string name="orderTotal">"Order Total $"</string>
+    <string name="itemsOrdered">"\nItems Ordered: "</string>
+    <string name="subtotal">"\nSubtotal: $"</string>
+    <string name="tax">"\nTax (8%): "</string>
     <string name="startNewOrder">START NEW ORDER</string>
 </resources>
