@@ -8,12 +8,12 @@
     <string name="itemsOrdered">\nArtículos ordenados</string>
     <string name="large">Grande $</string>
     <string name="medium">Medio $</string>
-    <string name="orderTotal">"Total de pedido $"</string>
+    <string name="orderTotal">"Total de pedido "</string>
     <string name="placeOrder">Realizar un Pedido</string>
     <string name="placeOrderButton"> Realizar pedido</string>
     <string name="shakes">Batidos $</string>
     <string name="small"> Pequeña $</string>
     <string name="startNewOrder">INICIO NUEVO ORDEN</string>
-    <string name="subtotal">"\nTotal Parcial: $"</string>
+    <string name="subtotal">"\nTotal Parcial: "</string>
     <string name="tax">"\nImpuesto (8%): "</string>
 </resources>
