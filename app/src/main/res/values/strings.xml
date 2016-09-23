@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">In And Out</string>
+    <string name="placeOrder">Place an Order</string>
+    <string name="doubleDouble">Double Double $</string>
+    <string name="cheeseburger">Cheeseburger $</string>
+    <string name="frenchFries">French Fries $</string>
+    <string name="shakes">Shakes $</string>
+    <string name="fountainDrinks">Fountain Drinks (pick size)</string>
+    <string name="small">Small $</string>
+    <string name="medium">Medium $</string>
+    <string name="large">Large $</string>
+    <string name="placeOrderButton">Place Order</string>
 </resources>
