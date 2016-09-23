@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 public class OrderActivity extends AppCompatActivity {
 
     private TextView doubleDoubleTextView;
@@ -31,6 +33,8 @@ public class OrderActivity extends AppCompatActivity {
     private String orderSummaryText;
 
     private Order currentOrder = new Order();
+
+    DecimalFormat currency = new DecimalFormat("#.00");
 
     public void activateSummary(View view)
     {
@@ -76,6 +80,13 @@ public class OrderActivity extends AppCompatActivity {
         mediumDrinkTextView.setText(Double.toString(currentOrder.getPriceMediumDrink()));
         largeDrinkTextView.setText(Double.toString(currentOrder.getPriceLargeDrink()));
 
+        doubleDoubleEditText.addTextChangedListener(doubleDoubleChangedListener);
+        cheeseburgerEditText.addTextChangedListener(cheeseburgerChangedListener);
+        frenchFriesEditText.addTextChangedListener(frenchFriesChangedListener);
+        shakesTextView.addTextChangedListener(shakesChangedListener);
+        smallDrinkEditText.addTextChangedListener(smallDrinkChangedListener);
+        mediumDrinkEditText.addTextChangedListener(mediumDrinkChangedListener);
+        largeDrinkEditText.addTextChangedListener(largeDrinkChangedListener);
     }
 
     private TextWatcher doubleDoubleChangedListener = new TextWatcher() {
@@ -86,11 +97,13 @@ public class OrderActivity extends AppCompatActivity {
 
         @Override
         public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
             try
             {
                 if (charSequence.length() > 0) {
                     int amount = Integer.parseInt(charSequence.toString());
                     currentOrder.setDoubleDoubles(amount);
+
                 }
                 else
                 {
