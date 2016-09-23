@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.text.DecimalFormat;
+import java.text.NumberFormat;
 
 public class OrderActivity extends AppCompatActivity {
 
@@ -34,14 +34,14 @@ public class OrderActivity extends AppCompatActivity {
 
     private Order currentOrder = new Order();
 
-    DecimalFormat currency = new DecimalFormat("#.00");
+    private static NumberFormat currency = NumberFormat.getCurrencyInstance();
 
     public void activateSummary(View view)
     {
-        orderTotalText = getString(R.string.orderTotal) + currentOrder.calculateTotal();
+        orderTotalText = getString(R.string.orderTotal) + currency.format(currentOrder.calculateTotal());
         orderSummaryText = getString(R.string.itemsOrdered) + currentOrder.calculateNumberOfItems()
-                + getString(R.string.subtotal) + currentOrder.calculateSubtotal()
-                + getString(R.string.tax) + currentOrder.calculateTax();
+                + getString(R.string.subtotal) + currency.format(currentOrder.calculateSubtotal())
+                + getString(R.string.tax) + currency.format(currentOrder.calculateTax());
 
 
         Intent orderSummaryIntent = new Intent(this, SummaryActivity.class);

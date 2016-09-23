@@ -2,8 +2,14 @@ package edu.orangecoastcollege.cs273.inandout;
 
 /**
  * Created by jkloppenburg1 on 9/22/2016.
+ * Calculates an order's cost
  */
+
+
 public class Order {
+    /**
+     * Different menu items
+     */
     private int cheeseburgers;
     private int doubleDoubles;
     private int frenchFries;
@@ -12,6 +18,9 @@ public class Order {
     private int mediumDrinks;
     private int largeDrinks;
 
+    /**
+     * Menu prices
+     */
     private static final double PRICE_DOUBLE_DOUBLE = 3.60;
     private static final double PRICE_CHEESEBURGER = 2.15;
     private static final double PRICE_FRENCH_FRIES = 1.65;
@@ -44,6 +53,11 @@ public class Order {
 
     public double calculateSubtotal()
     {
+        /**
+         * Calculates the total before taxes
+         *
+         * @return Subtotal as double
+         */
         double total = 0.0;
         total += this.cheeseburgers * PRICE_CHEESEBURGER;
         total += this.doubleDoubles * PRICE_DOUBLE_DOUBLE;
@@ -58,16 +72,28 @@ public class Order {
 
     public double calculateTax()
     {
+        /**
+         * Calculates the tax to be added
+         * @return Tax amount as double
+         */
         return calculateSubtotal() * TAX_RATE;
     }
 
     public double  calculateTotal()
     {
+        /**
+         * Calculates total (subtotal plus tax)
+         * @return Total as a double
+         */
         return calculateSubtotal() + calculateTax();
     }
 
     public int calculateNumberOfItems()
     {
+        /**
+         * Calculates the number of items ordered
+         * @return number of items as int
+         */
         int total = 0;
         total += this.cheeseburgers;
         total += this.doubleDoubles;
