@@ -181,7 +181,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="$"
-        android:id="@+id/mediumDrinkEditText"
+        android:id="@+id/mediumDrinkTextView"
         android:layout_row="7"
         android:layout_column="1" />
 
