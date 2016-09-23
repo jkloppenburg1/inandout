@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
+        android:text="@string/orderTotal"
         android:id="@+id/orderTotalTextView"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -25,10 +25,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
+        android:text="@string/itemsOrdered"
         android:id="@+id/orderSummaryTextView"
         android:layout_below="@+id/orderTotalTextView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="35dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/startNewOrder"
+        android:id="@+id/button2"
+        android:layout_centerVertical="true"
+        android:onClick="returnToDataEntry" />
 </RelativeLayout>

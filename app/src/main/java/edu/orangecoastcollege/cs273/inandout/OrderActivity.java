@@ -1,9 +1,11 @@
 package edu.orangecoastcollege.cs273.inandout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -25,7 +27,25 @@ public class OrderActivity extends AppCompatActivity {
     private EditText mediumDrinkEditText;
     private EditText largeDrinkEditText;
 
+    private String orderTotalText;
+    private String orderSummaryText;
+
     private Order currentOrder = new Order();
+
+    public void activateSummary(View view)
+    {
+        orderTotalText = getString(R.string.orderTotal) + currentOrder.calculateTotal();
+        orderSummaryText = getString(R.string.itemsOrdered) + currentOrder.calculateNumberOfItems()
+                + getString(R.string.subtotal) + currentOrder.calculateSubtotal()
+                + getString(R.string.tax) + currentOrder.calculateTax();
+
+
+        Intent orderSummaryIntent = new Intent(this, SummaryActivity.class);
+        orderSummaryIntent.putExtra("orderTotal", orderTotalText);
+        orderSummaryIntent.putExtra("orderSummary", orderSummaryText);
+
+        startActivity(orderSummaryIntent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

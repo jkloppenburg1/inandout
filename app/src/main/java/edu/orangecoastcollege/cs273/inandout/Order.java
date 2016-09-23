@@ -66,6 +66,19 @@ public class Order {
         return calculateSubtotal() + calculateTax();
     }
 
+    public int calculateNumberOfItems()
+    {
+        int total = 0;
+        total += this.cheeseburgers;
+        total += this.doubleDoubles;
+        total += this.frenchFries;
+        total += this.shakes;
+        total += this.smallDrinks;
+        total += this.mediumDrinks;
+        total += this.largeDrinks;
+
+        return total;
+    }
 
     //Getters and setters
     public int getCheeseburgers() {
